@@ -59,24 +59,23 @@ const emailVerificationMailGenContent = (username, verificationUrl) => {
     }
 }
 
-const fogotPassordMailGenContent = (username, verificationUrl) => {
+const forgotPasswordMailGenContent = (username, verificationUrl) => {
     return {
-        body:{
-            name:username,
-            intro: 'We got a request to reset your password',
+        body: {
+            name: username,
+            intro: 'We got a request to reset your password.',
             action: {
-                instructions: 'Password change url',
+                instructions: 'To reset your password, click the button below:',
                 button: {
                     color: '#22BC66',
-                    text: 'click to change password ',
+                    text: 'Reset Password',
                     link: verificationUrl
                 }
             },
-            outro: 'Need help, or have questions? Just reply to this email, we\'d love to help.'
-    
+            outro: 'If you didn\'t request this, please ignore this email.'
         }
-    }
-}
+    };
+};
 
 
 
